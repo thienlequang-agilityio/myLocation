@@ -15,6 +15,8 @@
 		16962D341B37B2B9006EA00C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16962D321B37B2B9006EA00C /* LaunchScreen.xib */; };
 		16962D401B37B2B9006EA00C /* MyLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16962D3F1B37B2B9006EA00C /* MyLocationTests.swift */; };
 		16962D4A1B37F257006EA00C /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16962D491B37F257006EA00C /* LocationDetailsViewController.swift */; };
+		16962D4C1B3804EF006EA00C /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16962D4B1B3804EF006EA00C /* CategoryPickerViewController.swift */; };
+		16962D4E1B3812C3006EA00C /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16962D4D1B3812C3006EA00C /* HudView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		16962D3E1B37B2B9006EA00C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16962D3F1B37B2B9006EA00C /* MyLocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationTests.swift; sourceTree = "<group>"; };
 		16962D491B37F257006EA00C /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
+		16962D4B1B3804EF006EA00C /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
+		16962D4D1B3812C3006EA00C /* HudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +89,9 @@
 				16962D291B37B2B9006EA00C /* CurrentLocationViewController.swift */,
 				16962D2B1B37B2B9006EA00C /* SecondViewController.swift */,
 				16962D491B37F257006EA00C /* LocationDetailsViewController.swift */,
+				16962D4B1B3804EF006EA00C /* CategoryPickerViewController.swift */,
 				16962D2D1B37B2B9006EA00C /* Main.storyboard */,
+				16962D4D1B3812C3006EA00C /* HudView.swift */,
 				16962D301B37B2B9006EA00C /* Images.xcassets */,
 				16962D321B37B2B9006EA00C /* LaunchScreen.xib */,
 				16962D251B37B2B9006EA00C /* Supporting Files */,
@@ -220,7 +226,9 @@
 			files = (
 				16962D4A1B37F257006EA00C /* LocationDetailsViewController.swift in Sources */,
 				16962D2C1B37B2B9006EA00C /* SecondViewController.swift in Sources */,
+				16962D4E1B3812C3006EA00C /* HudView.swift in Sources */,
 				16962D281B37B2B9006EA00C /* AppDelegate.swift in Sources */,
+				16962D4C1B3804EF006EA00C /* CategoryPickerViewController.swift in Sources */,
 				16962D2A1B37B2B9006EA00C /* CurrentLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

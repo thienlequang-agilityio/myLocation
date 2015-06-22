@@ -30,11 +30,13 @@ class LocationDetailsViewController: UITableViewController, UITextViewDelegate {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    var categoryName = "No Category"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         descriptionTextView.text = descriptionText
-        categoryLabel.text = ""
+        categoryLabel.text = categoryName
         
         latitudeLabel.text = String(format: "%.8f", coordinate.latitude)
         longitudeLabel.text = String(format: "%.8f", coordinate.longitude)
@@ -46,6 +48,26 @@ class LocationDetailsViewController: UITableViewController, UITextViewDelegate {
         }
         
         dateLabel.text = formatDate(NSDate())
+        
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("hideKeyboard:"))
+        gestureRecognizer.cancelsTouchesInView = false
+        tableView.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    func hideKeyboard(gestureRecognizer: UIGestureRecognizer) {
+        let point = gestureRecognizer.locationInView(tableView)
+        let indexPath = tableView.indexPathForRowAtPoint(point)
+        if indexPath != nil && indexPath!.section == 0 && indexPath!.row == 0 {
+            return
+        }
+        descriptionTextView.resignFirstResponder()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PickCategory" {
+            let controller = segue.destinationViewController as! CategoryPickerViewController
+            controller.selectedCategoryName = categoryName
+        }
     }
     
     func stringFromPlacemark(placemark: CLPlacemark) -> String {
@@ -62,6 +84,8 @@ class LocationDetailsViewController: UITableViewController, UITextViewDelegate {
     
     @IBAction func done() {
         println("Description '\(descriptionText)'")
+        let hudView = HudView.hudInView(navigationController!.view, animated: true)
+        hudView.text = "Tagged"
         dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -81,6 +105,27 @@ class LocationDetailsViewController: UITableViewController, UITextViewDelegate {
         } else {
             return 44
         }
+    }
+    
+    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+                if indexPath.section == 0 || indexPath.section == 1 {
+                    return indexPath
+                } else {
+                    return nil
+                }
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+                        if indexPath.section == 0 && indexPath.row == 0 {
+                            descriptionTextView.becomeFirstResponder()
+                        }
+    }
+    
+    
+    @IBAction func categoryPickerDidPickCategory(seque: UIStoryboardSegue) {
+        let controller = seque.sourceViewController as! CategoryPickerViewController
+        categoryName = controller.selectedCategoryName
+        categoryLabel.text = categoryName
     }
 }
 
