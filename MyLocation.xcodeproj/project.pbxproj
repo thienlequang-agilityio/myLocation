@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		164B48C11B39085600748960 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164B48C01B39085600748960 /* Functions.swift */; };
 		16962D281B37B2B9006EA00C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16962D271B37B2B9006EA00C /* AppDelegate.swift */; };
 		16962D2A1B37B2B9006EA00C /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16962D291B37B2B9006EA00C /* CurrentLocationViewController.swift */; };
 		16962D2C1B37B2B9006EA00C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16962D2B1B37B2B9006EA00C /* SecondViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		164B48C01B39085600748960 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		16962D221B37B2B9006EA00C /* MyLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16962D261B37B2B9006EA00C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16962D271B37B2B9006EA00C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				16962D271B37B2B9006EA00C /* AppDelegate.swift */,
+				164B48C01B39085600748960 /* Functions.swift */,
 				16962D291B37B2B9006EA00C /* CurrentLocationViewController.swift */,
 				16962D2B1B37B2B9006EA00C /* SecondViewController.swift */,
 				16962D491B37F257006EA00C /* LocationDetailsViewController.swift */,
@@ -227,6 +230,7 @@
 				16962D4A1B37F257006EA00C /* LocationDetailsViewController.swift in Sources */,
 				16962D2C1B37B2B9006EA00C /* SecondViewController.swift in Sources */,
 				16962D4E1B3812C3006EA00C /* HudView.swift in Sources */,
+				164B48C11B39085600748960 /* Functions.swift in Sources */,
 				16962D281B37B2B9006EA00C /* AppDelegate.swift in Sources */,
 				16962D4C1B3804EF006EA00C /* CategoryPickerViewController.swift in Sources */,
 				16962D2A1B37B2B9006EA00C /* CurrentLocationViewController.swift in Sources */,
@@ -425,6 +429,7 @@
 				16962D451B37B2B9006EA00C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16962D461B37B2B9006EA00C /* Build configuration list for PBXNativeTarget "MyLocationTests" */ = {
 			isa = XCConfigurationList;
@@ -433,6 +438,7 @@
 				16962D481B37B2B9006EA00C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
